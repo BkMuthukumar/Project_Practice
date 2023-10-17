@@ -1,25 +1,28 @@
 package stepdefinition.com;
 
+import java.time.Duration;
+
+import org.junit.BeforeClass;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Hooks_class {
-	@Given("User in on automation code practice page")
-	public void user_in_on_automation_code_practice_page() {
-	    
-	}
-
-	@When("User {string},{string} , {string} and {string}")
-	public void user_and(String name, String email, String phone , String address) {
-	    
-	}
-
-	@Then("validate tool tip of all input box")
-	public void validate_tool_tip_of_all_input_box() {
-	   
-	}
-
+	public WebDriver driver;
+ @BeforeClass
+  public void setup() {
+	 driver=new ChromeDriver();
+	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	 driver.get("https://testautomationpractice.blogspot.com/");
+	 driver.manage().window().maximize();
+	 
+ }
+ 
+	
+	
 
 	
 

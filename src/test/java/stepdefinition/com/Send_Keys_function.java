@@ -4,14 +4,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Send_Keys_function {
+public class Send_Keys_function extends base_package {
 	@Given("User in on automation code practice page")
 	public void user_in_on_automation_code_practice_page() {
+		
 	    
 	}
 
 	@When("User {string},{string} , {string} and {string}")
 	public void user_and(String name, String email, String phone , String address) {
+		
 	    
 	}
 
